@@ -1,5 +1,13 @@
 import { FC, useEffect, useState } from "react";
-import { container, planetImg } from "./map.css";
+import {
+  container,
+  magnifyer,
+  magnifyerGlass,
+  magnifyerHandle,
+  magnifyerLabel,
+  planetContainer,
+  planetImg,
+} from "./map.css";
 import { Planets } from "./types";
 import { InitialPlanets, PlanetUrls } from "./constants";
 import { getImageUrl } from "./utils";
@@ -36,11 +44,12 @@ const Map: FC = () => {
         {Object.entries(planets).map((planet) => {
           return (
             <div
+              className={planetContainer}
               key={planet[0]}
               style={assignInlineVars({
-                width: planet[1].size,
+                width: planet[1].size + 6,
                 height: planet[1].size,
-                marginLeft: `${planet[1].dist}px`,
+                marginLeft: `${planet[1].dist + 6}px`,
               })}
             >
               <img
@@ -51,6 +60,13 @@ const Map: FC = () => {
                 width={planet[1].size}
                 height={planet[1].size}
               />
+              {planet[0] === "pluto" && (
+                <div className={magnifyer}>
+                  <label className={magnifyerLabel}>x100</label>
+                  <span className={magnifyerGlass} />
+                  <span className={magnifyerHandle} />
+                </div>
+              )}
             </div>
           );
         })}

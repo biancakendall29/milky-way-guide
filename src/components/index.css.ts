@@ -9,8 +9,9 @@ export const main = style({
   padding: mwTheme.spacing.small,
   position: "relative",
   height: "100%",
-  backgroundImage: 'url("/img/starry-bg.jpg")',
-  backgroundSize: "cover",
-  backgroundPosition: "center",
+  backgroundColor: mwTheme.colors.black,
+  // backgroundImage: 'url("/img/starry-bg.jpg")',
+  // backgroundSize: "cover",
+  // backgroundPosition: "center",
   overflow: "clip",
 });

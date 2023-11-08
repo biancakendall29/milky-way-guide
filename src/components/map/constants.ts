@@ -13,7 +13,7 @@ export const InitialPlanets: Planets = {
   pluto: { url: "", size: 0, dist: 0 },
 };
 
-export const SIZE_FACTOR = 3000;
+export const SIZE_FACTOR = 2000;
 export const DISTANCE_FACTOR = 4;
 
 const SUN = {
@@ -42,14 +42,14 @@ const MARS = {
 };
 const JUPITER = {
   url: "PIA00343",
-  size: 0.100398 * SIZE_FACTOR,
+  size: 0.106 * SIZE_FACTOR,
   dist: 5.2 * DISTANCE_FACTOR,
 };
 const SATURN = {
   url: "PIA18282",
   size: 0.083626 * SIZE_FACTOR,
   dist: 9.54 * DISTANCE_FACTOR,
-}; // PIA18295
+}; // PIA18295 PIA03152 PIA18282
 const URANUS = {
   url: "PIA01488",
   size: 0.036422 * SIZE_FACTOR,
@@ -62,7 +62,7 @@ const NEPTUNE = {
 };
 const PLUTO = {
   url: "PIA19708",
-  size: 0.0001704 * SIZE_FACTOR,
+  size: 0.01704 * SIZE_FACTOR,
   dist: 39 * DISTANCE_FACTOR,
 };
 
